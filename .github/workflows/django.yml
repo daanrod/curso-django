@@ -30,5 +30,7 @@ jobs:
         pipenv run pytest --cov=pypro
 
     - name: Posting Coverage
+      env:
+        CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       run: |
         pipenv run codecov
