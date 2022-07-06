@@ -8,12 +8,12 @@ django = "*"
 gunicorn = "*"
 flake8 = "*"
 pytest-django = "*"
+pytest-cov = "*"
 
 [dev-packages]
 flake8 = "*"
 coverage = "*"
 pytest = "*"
-pytest-cov = "*"
 codecov = "*"
 
 [requires]
