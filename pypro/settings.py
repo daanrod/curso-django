@@ -75,6 +75,14 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'pypro.wsgi.application'
 
+# Configuration django-debug-toolbar
+
+INTERNAL_IPS = config('INTERNAL_IPS', cast=Csv(), default= '127.0.0.1')
+
+if DEBUG:
+    INSTALLED_APPS.append('debug_toolbar')
+    MIDDLEWARE.insert(0, 'debug_toolbar.middleware.DebugToolbarMiddleware')
+
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
@@ -124,13 +132,13 @@ USE_TZ = True
 
 
 # Configuration of the development envoirement
-STATIC_URL = '/static/'
+STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-MEDIA_URL = '/media/'
+MEDIA_URL = 'media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'mediafiles')
 
-COLLECTFAST_ENABLE = False
+COLLECTFAST_ENABLED = False
 
 AWS_ACCESS_KEY_ID = config('AWS_ACCESS_KEY_ID')
 
@@ -144,15 +152,14 @@ if AWS_ACCESS_KEY_ID:
     AWS_AUTO_CREATE_BUCKET = False
     AWS_QUERY_STRING_AUTH = True
     AWS_S3_CUSTOM_DOMAIN = None
-
-    COLLECTFAST_ENABLE = True
-
     AWS_DEFAULT_ACL = 'private'
+
+    COLLECTFAST_ENABLED = True
+    COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
 
 # Static Assets
 # ---------------------------------------------------------------------------------------
-    STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-    COLLECTFAST_STRATEGY = 'collectfast.strategies.boto3.Boto3Strategy'
+    STATICFILES_STORAGE = 's3_folder_storage.s3.StaticStorage'
     STATIC_S3_PATH = 'static'
     STATIC_ROOT = f'//{STATIC_S3_PATH}/'
     STATIC_URL = f'//s3.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}/{STATIC_S3_PATH}/'
