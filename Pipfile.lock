@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "6890365fd3e05ed6731c91cccbd5cbb12b58ce9b48a285ec2b43a66e956bfe30"
+            "sha256": "509400053ffcbbdeef7e3d990edd0fe716f6ef2c99e7b2d7f9536bf84aa8b3da"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -41,19 +41,19 @@
         },
         "boto3": {
             "hashes": [
-                "sha256:2ca999b621ab5fb7442f86e783440ec0e292a86c48782ee09e526c325902ecf1",
-                "sha256:ac1a4a9070101f42062461d8e829dd97f77b6e091bcc8cddee577739b28d39bb"
+                "sha256:d4685e2fe2c436e558a94c7f68f1a6d4a6c7519d2b25a88fdf855d9a928889ad",
+                "sha256:de067346942c6d1730b513783385620519b8b2935f5b0ee2e66d565ffb57ce12"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==1.24.30"
+            "version": "==1.24.31"
         },
         "botocore": {
             "hashes": [
-                "sha256:35897569bf5f80b935f7381f6b0d1580ee0f6a94e3c568faca9ce6603391c829",
-                "sha256:953b9b4c0033280b2229e6e9c5de3ad2e56b887aec02c85680a2156842212092"
+                "sha256:b0cc79fb5a37a0e2b6befe86efd027b92101d819f1fdc56cfff39f2eb239f232",
+                "sha256:cbe87fa791aa4e8c3da64b1ccbaca7f809f6d1fba8d0b1855de2989815ef8736"
             ],
             "markers": "python_version >= '3.7'",
-            "version": "==1.27.30"
+            "version": "==1.27.31"
         },
         "certifi": {
             "hashes": [
@@ -152,6 +152,14 @@
             ],
             "index": "pypi",
             "version": "==3.5.0"
+        },
+        "django-ordered-model": {
+            "hashes": [
+                "sha256:0006b111f472a2348f75554a4e77bee2b1f379a0f96726af6b1a3ebf3a950789",
+                "sha256:62161a6bc51d8b402644854b257605d7b5183d01fd349826682a87e9227c05b5"
+            ],
+            "index": "pypi",
+            "version": "==3.6"
         },
         "django-s3-folder-storage": {
             "hashes": [
@@ -466,7 +474,7 @@
                 "sha256:5189b6f22b01957427f35b6a08d9a0bc45b46d3788ef5a92e978433c7a35f8a5",
                 "sha256:575e708016ff3a5e3681541cb9d79312c416835686d054a23accb873b254f413"
             ],
-            "markers": "python_full_version >= '3.6.0'",
+            "markers": "python_version >= '3.6'",
             "version": "==2.1.0"
         },
         "codecov": {
