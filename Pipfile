@@ -22,6 +22,7 @@ flake8 = "*"
 coverage = "*"
 pytest = "*"
 codecov = "*"
+model-mommy = "*"
 
 [requires]
 python_version = "3.10"
