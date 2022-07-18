@@ -29,4 +29,3 @@ def test_titulo(resp, aula: Aula):
 
 def test_youtube(resp, aula: Aula):
     assert_contains(resp, f'https://www.youtube.com/embed/{aula.youtube_id}')
-
