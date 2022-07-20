@@ -4,7 +4,6 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "*"
 gunicorn = "*"
 flake8 = "*"
 pytest-django = "*"
@@ -18,6 +17,9 @@ django-debug-toolbar = "*"
 sentry-sdk = "*"
 django-ordered-model = "*"
 model-bakery = "*"
+ipython = "*"
+django = "*"
+django-extensions = "*"
 
 [dev-packages]
 flake8 = "*"
